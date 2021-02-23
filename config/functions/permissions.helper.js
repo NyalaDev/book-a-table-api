@@ -9,13 +9,12 @@ const enablePermission = async (roleType, controller, action) => {
     const roles = await strapi
       .query('role', 'users-permissions')
       .findOne({ type: roleType });
-    const rolePermission = roles.permissions.find((permission) => {
-      return (
+    const rolePermission = roles.permissions.find(
+      (permission) =>
         permission.type === 'application' &&
         permission.controller === controller &&
-        permission.action === action.toLowerCase()
-      );
-    });
+        permission.action === action.toLowerCase(),
+    );
     strapi.query('permission', 'users-permissions').update(
       { id: rolePermission.id },
       {
@@ -34,12 +33,12 @@ const crudActions = ['create', 'count', 'delete', 'find', 'findone', 'update'];
 const readOnlyActions = ['find', 'findone'];
 
 const initPermissions = async () => {
-  for (let action of readOnlyActions) {
+  for (const action of readOnlyActions) {
     await enablePermission('public', 'restaurant', action);
     await enablePermission('public', 'table', action);
   }
 
-  for (let action of crudActions) {
+  for (const action of crudActions) {
     await enablePermission('authenticated', 'restaurant', action);
     await enablePermission('authenticated', 'table', action);
   }

@@ -26,10 +26,7 @@
     },
     "tableStatus": {
       "type": "enumeration",
-      "enum": [
-        "available",
-        "booked"
-      ],
+      "enum": ["available", "booked"],
       "default": "available"
     },
     "restaurant": {

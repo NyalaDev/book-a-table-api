@@ -15,28 +15,29 @@ module.exports = {
   },
   async update(ctx) {
     const { id } = ctx.params;
-    let entity;
     const restaurant = await strapi.services.restaurant.findOne({
       id: ctx.params.id,
       'owner.id': ctx.state.user.id,
     });
     if (!restaurant) {
-      return ctx.unauthorized(`You can't update this entry`);
+      return ctx.unauthorized("You can't update this entry");
     }
-    entity = await strapi.services.restaurant.update({ id }, ctx.request.body);
+    const entity = await strapi.services.restaurant.update(
+      { id },
+      ctx.request.body,
+    );
     return sanitizeEntity(entity, { model: strapi.models.restaurant });
   },
   async delete(ctx) {
     const { id } = ctx.params;
-    let entity;
     const restaurant = await strapi.services.restaurant.findOne({
       id: ctx.params.id,
       'owner.id': ctx.state.user.id,
     });
     if (!restaurant) {
-      return ctx.unauthorized(`You can't delete this entry`);
+      return ctx.unauthorized("You can't delete this entry");
     }
-    entity = await strapi.services.restaurant.delete({ id });
+    const entity = await strapi.services.restaurant.delete({ id });
     return {
       deleted: true,
       restaurant: sanitizeEntity(entity, { model: strapi.models.restaurant }),

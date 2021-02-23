@@ -35,6 +35,10 @@
     "owner": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "tables": {
+      "via": "restaurant",
+      "collection": "table"
     }
   }
 }

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tables",
+  "info": {
+    "name": "table",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "identifier": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "capacity": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "tableStatus": {
+      "type": "enumeration",
+      "enum": [
+        "available",
+        "booked"
+      ],
+      "default": "available"
+    },
+    "restaurant": {
+      "model": "restaurant",
+      "via": "tables"
+    }
+  }
+}

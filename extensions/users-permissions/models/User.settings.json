@@ -58,6 +58,17 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "bookings": {
+      "collection": "booking",
+      "via": "customer"
+    },
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string"
     }
   }
 }

@@ -24,14 +24,14 @@
     "description": {
       "type": "string"
     },
-    "tableStatus": {
-      "type": "enumeration",
-      "enum": ["available", "booked"],
-      "default": "available"
-    },
     "restaurant": {
       "model": "restaurant",
       "via": "tables"
+    },
+    "available": {
+      "type": "boolean",
+      "default": true,
+      "required": false
     }
   }
 }

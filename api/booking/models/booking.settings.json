@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "name": "booking"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "bookingDate": {
+      "type": "datetime"
+    },
+    "bookingStatus": {
+      "type": "enumeration",
+      "enum": [
+        "confirmed",
+        "pending",
+        "canceled"
+      ],
+      "default": "pending"
+    },
+    "people": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    },
+    "restaurant": {
+      "model": "restaurant"
+    },
+    "table": {
+      "model": "table"
+    },
+    "customer": {
+      "via": "bookings",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

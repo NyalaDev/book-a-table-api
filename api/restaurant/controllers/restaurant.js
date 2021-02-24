@@ -38,9 +38,6 @@ module.exports = {
       return ctx.unauthorized("You can't delete this entry");
     }
     const entity = await strapi.services.restaurant.delete({ id });
-    return {
-      deleted: true,
-      restaurant: sanitizeEntity(entity, { model: strapi.models.restaurant }),
-    };
+    return sanitizeEntity(entity, { model: strapi.models.restaurant });
   },
 };

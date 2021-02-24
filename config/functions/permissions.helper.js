@@ -33,15 +33,16 @@ const crudActions = ['create', 'count', 'delete', 'find', 'findone', 'update'];
 const readOnlyActions = ['find', 'findone'];
 
 const initPermissions = async () => {
-  for (const action of readOnlyActions) {
-    await enablePermission('public', 'restaurant', action);
-    await enablePermission('public', 'table', action);
-  }
+  readOnlyActions.forEach(async (action) => {
+    enablePermission('public', 'restaurant', action);
+    enablePermission('public', 'table', action);
+  });
 
-  for (const action of crudActions) {
+  crudActions.forEach(async (action) => {
     await enablePermission('authenticated', 'restaurant', action);
     await enablePermission('authenticated', 'table', action);
-  }
+    await enablePermission('authenticated', 'booking', action);
+  });
 };
 
 module.exports = {

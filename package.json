@@ -1,8 +1,8 @@
 {
-  "name": "book-a-table",
+  "name": "book-a-table-api",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Example API for educational and tutorial purposes",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -50,16 +50,16 @@
     }
   },
   "author": {
-    "name": "Khalid Elshafie"
+    "name": "nyala.dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abolkog/book-a-table.git"
+    "url": "git+https://github.com/NyalaDev/book-a-table-api.git"
   },
   "bugs": {
-    "url": "https://github.com/abolkog/book-a-table/issues"
+    "url": "https://github.com/NyalaDev/book-a-table-api/issues"
   },
-  "homepage": "https://github.com/abolkog/book-a-table",
+  "homepage": "https://github.com/NyalaDev/book-a-table-api",
   "strapi": {
     "uuid": "195d5de7-f548-49ec-a11d-c8896735659c"
   },

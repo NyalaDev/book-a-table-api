@@ -1,6 +1,6 @@
 # Book-a-table
-![GitHub package.json version](https://img.shields.io/github/package-json/v/nyaladev/book-a-table-api)
-![](https://img.shields.io/github/license/nyaladev/book-a-table-api.svg)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/NyalaDev/book-a-table-api)
+![](https://img.shields.io/github/license/NyalaDev/book-a-table-api.svg)
 
 Book-a-table is a simple table booking API developed for education and tutorial purposes
 
@@ -13,7 +13,7 @@ Book-a-table is a simple table booking API developed for education and tutorial 
 
 - Clone the repo
 ```shell
-git clone https://github.com/nyaladev/book-a-table-api.git
+git clone https://github.com/NyalaDev/book-a-table-api.git
 ```
 
 - Install the dependencies

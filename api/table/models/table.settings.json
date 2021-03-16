@@ -25,8 +25,8 @@
       "type": "string"
     },
     "restaurant": {
-      "model": "restaurant",
-      "via": "tables"
+      "via": "tables",
+      "model": "restaurant"
     },
     "available": {
       "type": "boolean",

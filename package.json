@@ -22,6 +22,7 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
+    "faker": "^5.4.0",
     "knex": "<0.20.0",
     "sqlite3": "5.0.0",
     "strapi": "3.5.0",

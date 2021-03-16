@@ -3,6 +3,9 @@ const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
 module.exports = {
   async create(ctx) {
     let entity;
+    if (!ctx.state.user) {
+      return ctx.unauthorized('Unauthorized');
+    }
     if (ctx.is('multipart')) {
       const { data, files } = parseMultipartData(ctx);
       data.owner = ctx.state.user.id;

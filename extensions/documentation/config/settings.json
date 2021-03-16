@@ -1,0 +1,36 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Book-a-Table",
+    "description": "Sample API for educational/tutorials purposes",
+    "contact": {
+      "name": "nyala Team",
+      "email": "info@nyala.dev",
+      "url": "https://nyala.dev"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://mit-license.org"
+    }
+  },
+  "x-strapi-config": {
+    "path": "/documentation",
+    "showGeneratedFiles": true,
+    "pluginsForWhichToGenerateDoc": []
+  },
+  "servers": [
+    {
+      "url": "http://localhost:1337",
+      "description": "local server"
+    },
+    {
+      "url": "Development server",
+      "description": "https://book-a-table-api.herokuapp.com"
+    }
+  ],
+  "externalDocs": {
+      "description": "Find out more",
+      "url": "https://github.com/nyaladev/book-a-table-api"
+    }
+}
